@@ -1,0 +1,11 @@
+bookmarket\AppCanceled.class
+bookmarket\ReqCanceled.class
+bookmarket\PolicyHandler.class
+bookmarket\ApprovalApplication.class
+bookmarket\AbstractEvent$1.class
+bookmarket\config\kafka\KafkaProcessor.class
+bookmarket\ApproveRepository.class
+bookmarket\AbstractEvent.class
+bookmarket\Approved.class
+bookmarket\Approve.class
+bookmarket\ApproveController.class
