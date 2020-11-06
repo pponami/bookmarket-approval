@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: approval
-          image: admin16.azurecr.io/mileage:latest
+          image: admin16.azurecr.io/approval:latest
           ports:
             - containerPort: 8080
           readinessProbe:
