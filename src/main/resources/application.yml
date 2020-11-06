@@ -62,6 +62,6 @@ spring:
         event-out:
           destination: bookmarket
           contentType: application/json
-api:
-  payment:
-    url: ${appurl}
+#api:
+#  payment:
+#    url: ${appurl}
