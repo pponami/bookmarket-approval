@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: approval
+  name: mileage
   labels:
-    app: approval
+    app: mileage
 spec:
   replicas: 1
   selector:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: approval
-          image: admin16.azurecr.io/approval:latest
+          image: admin16.azurecr.io/mileage:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -28,21 +28,15 @@ spec:
             periodSeconds: 5
             failureThreshold: 10
           livenessProbe:
-#            httpGet:
-#              path: '/actuator/health'
-#              port: 8080
-            tcpSocket:
-              port: 8081
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            #            tcpSocket:
+            #              port: 8081
             initialDelaySeconds: 15
-#           timeoutSeconds: 2
+            timeoutSeconds: 2
             periodSeconds: 5
-#          failureThreshold: 5
-#            env:
-#              - name: appurl
-#                valueFrom:
-#                  configMapKeyRef:
-#                    name: apiappurl
-#                    key: url
+            failureThreshold: 5
           resources:
             limits:
               cpu: 500m
