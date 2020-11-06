@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mileage
+  name: approval
   labels:
-    app: mileage
+    app: approval
 spec:
   replicas: 1
   selector:
